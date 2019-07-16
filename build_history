@@ -1,0 +1,23 @@
+npm install create-react-app -g
+
+
+# 创建项目
+npx create-react-app pimi-ui
+
+npm install antd --save
+
+npm install dva --save
+
+安装路由模块
+npm install react-router-dom --save
+
+npm install history --save
+
+cnpm install --save-dev babel-plugin-transform-react-jsx
+
+cnpm install --save-dev babel-preset-react
+
+cnpm install babel-loader --save-dev
+
+
+
