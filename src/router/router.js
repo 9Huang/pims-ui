@@ -1,34 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-    BrowserRouter,
-    Route,
-    Switch
-} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import browserHistory from "history/createBrowserHistory";
-
-import './../index.css';
-import App from './../App';
+import Home from "../pages/home";
 
 class Router extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
     render() {
         return (
             <BrowserRouter history={browserHistory}>
                 <Switch>
-                    <Route path="/" exact component={App} />
-                    <Route path="/finance" component={App} />
+                    <Route path="/" exact component={Home} />
+                    <Route path="/finance" component={Home} />
                 </Switch>
             </BrowserRouter>
         );
     }
+
 }
 
-
-ReactDOM.render(
-    <Router/>,
-    document.getElementById('root')
-);
+export default Router

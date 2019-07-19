@@ -1,13 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import "antd/dist/antd.css";
-import PageLayout from "./components/common/pageLayout";
+import ReactDOM from 'react-dom'
 
-function App() {
-  return (
-    <PageLayout />
-  );
-}
+import Router from "./router/router";
 
-export default App;
+ReactDOM.render(<Router/>, document.getElementById("root"));

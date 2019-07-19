@@ -19,10 +19,10 @@ class LeftMenu extends React.Component {
                 style={this.menu.style}>
                 {
                     this.menu.subMenus.map((subMenu) => {
-                        return <SubMenu key={subMenu.key} title={<span><Icon type={subMenu.iconType}/>{subMenu.title}</span>}>
+                        return <SubMenu key={"sub-menu-"+subMenu.key} title={<span><Icon type={subMenu.iconType}/>{subMenu.title}</span>}>
                             {
                                 subMenu.items.map((item) => {
-                                    return <Item key={item.key}>{item.text}</Item>;
+                                    return <Item key={"menu-item-"+item.key}>{item.text}</Item>;
                                 })
                             }
                             </SubMenu>;

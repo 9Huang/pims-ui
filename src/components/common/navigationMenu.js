@@ -3,11 +3,6 @@ import { Menu } from 'antd'
 
 class NavigationMenu extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-    }
-
     render() {
         return (
             <Menu
@@ -17,7 +12,7 @@ class NavigationMenu extends React.Component {
                 style={this.props.menu.style}>
                 {
                     this.props.menu.items.map((element) => {
-                        return <Menu.Item key={element.key}>{element.value}</Menu.Item>;
+                        return <Menu.Item key={"nav-menu-"+element.key}>{element.value}</Menu.Item>;
                     })
                 }
             </Menu>
