@@ -9,6 +9,7 @@ const { Header, Content, Sider } = Layout;
 class PageLayout extends React.Component {
 
     render() {
+        const breadcrumb = this.props.pageHeader.breadcrumb;
         return (
             <div>
                 <Layout>
@@ -21,7 +22,7 @@ class PageLayout extends React.Component {
                             <LeftMenu menu={this.props.leftMenu} />
                         </Sider>
                         <Layout style={{ padding: '0 24px 24px' }}>
-                            <PageHeader title={this.props.pageHeader.title} breadcrumb={ this.props.pageHeader.breadcrumb } />
+                            <PageHeader title={ this.props.pageHeader.title } breadcrumb={{ breadcrumb }} />
                             <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280, }} >
                                 Content
                             </Content>
@@ -87,11 +88,11 @@ PageLayout.defaultProps = {
         ]
     },
     pageHeader : {
-        title : "",
+        title : "Hello",
         breadcrumb : [
-            { path: 'index', breadcrumbName: 'First-level Menu' },
-            { path: 'first', breadcrumbName: 'Second-level Menu' },
-            { path: 'second', breadcrumbName: 'Third-level Menu' },
+            { path: 'index', breadcrumbName: 'First-level Menu', },
+            { path: 'first', breadcrumbName: 'Second-level Menu', },
+            { path: 'second', breadcrumbName: 'Third-level Menu', },
         ]
     }
 };
